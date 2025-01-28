@@ -1,0 +1,117 @@
+<!DOCTYPE html><!
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Train Ticket Booking</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header>
+    <h1>Train Ticket Booking</h1>
+  </header>
+
+  <main>
+    <section id="booking-form">
+      <h2>Book a Train Ticket</h2>
+      <form action="process_booking.php" method="post">
+        <label for="train-name">Train Name:</label>
+        <input type="text" id="train-name" name="trainName" required>
+
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="bookingDate" required>
+
+        <label for="passenger-name">Passenger Name:</label>
+        <input type="text" id="passenger-name" name="passengerName" required>
+
+        <button type="submit">Book Now</button>
+      </form>
+    </section>
+
+    <section id="schedule">
+      <h2>Train Schedule</h2>
+      <p>Display your schedule here...</p>
+    </section>
+  </main>
+
+</body>
+</html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Train Booking System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="C:\Program Files\Sublime Text\trainlogo.jpeg" alt="Train Booking System Logo">
+        <h1>MARUTI TRAINS</h1>
+    </header>
+
+    <section>
+        <h2>Welcome to our Train Booking System!</h2>
+        <p>Book your train tickets easily with our user-friendly platform.</p>
+
+        <!-- Add your booking form or other content here -->
+
+        <div id="photo_templates">
+            <img class="photo" src="train_image1.jpg.jpg" alt="Train Image 4">
+            <img  class="photo" src="train_image2.jpg.jpg" alt="Train Image 2">
+            <img class="photo" src="train_image3.jpg.jpg" alt="Train Image 3">
+            <img class="photo" src="train_image4.jpg.jpg" alt="Train Image 4">
+            <img class="photo" src="train_image5.jpg.jpg" alt="Train Image 5">
+            <img class="photo" src="train_image6.jpg.jpg" alt="Train Image 6">
+        </div>
+
+        <h3>About Us</h3>
+        <p>Welcome to Train Booking System, where your journey begins! Our mission is to provide a seamless and efficient platform for booking train tickets, making your travel experience delightful and hassle-free.</p>
+
+        <p>At Train Booking System, we understand the importance of reliable and convenient transportation. Whether you're a daily commuter or planning a leisurely trip, our user-friendly platform is designed to cater to all your train booking needs.</p>
+
+        <p>Our team is committed to offering a wide range of options, ensuring you have the flexibility to choose the best routes, timings, and classes that suit your preferences. We work with major railway networks to provide you with up-to-date information and ensure a smooth booking process.</p>
+
+        <p>Customer satisfaction is at the core of our values. We strive to exceed your expectations by providing excellent service, transparent pricing, and responsive customer support. Your feedback is invaluable, and we continuously work to enhance our platform based on your needs.</p>
+
+        <p>Thank you for choosing Train Booking System. We look forward to being a part of your journey and making your travel experiences memorable. Safe travels!</p>
+    </section>
+
+    <footer>
+        <div>
+            <h4>Contact Us</h4>
+            <p>Email: info@trainbookingsystem.com</p>
+            <p>Phone: +91 9509716295</p>
+        </div>
+        <div>
+            <p>&copy; 2024 Train Booking System. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
+// Sample schedule data with routes (replace this with data from your backend or database)
+const scheduleData = [
+  { trainName: "Express 101", route: "City A to City B", departureTime: "08:00 AM" },
+  { trainName: "Local 202", route: "City B to City C", departureTime: "10:30 AM" },
+];
+
+// Function to update the schedule section with the provided data
+function updateSchedule() {
+  const scheduleList = document.getElementById("schedule-list");
+
+  // Clear existing schedule items
+  scheduleList.innerHTML = "";
+
+  // Add new schedule items
+  scheduleData.forEach(item => {
+    const listItem = document.createElement("li");
+    listItem.textContent = `${item.trainName} - Route: ${item.route} - Departure Time: ${item.departureTime}`;
+    scheduleList.appendChild(listItem);
+  });
+}
+
+// Run the updateSchedule function when the page loads
+window.addEventListener("load", updateSchedule);
+
+<script src="app.js"></script>
